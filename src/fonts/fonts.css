@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Geneva';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./geneva-normal.woff);
+  src: url(./geneva-normal.woff2);
+};
+
+@font-face {
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./Verdana.woff);
+  src: url(./Verdana.woff2);
+}
