@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import api from '../utils/Api';
 import './Main.css';
 import News from './News';
+import api from '../utils/Api';
 
-function Main () {
+function Main ({newsFullData, setNewsFullData}) {
 
   const [newsIdArray, setNewsIdArray] = useState([]);
 
@@ -15,10 +15,12 @@ function Main () {
     .catch((err) => console.log(err))
   }, [])
 
+  console.log(newsFullData)
+
   return (
     <section className="main">
       <ol className="main__news-list">
-        {newsIdArray.map((id) => <News id={id}/>)}
+        {newsIdArray.map((id) => <News id={id} newsFullData={newsFullData} setNewsFullData={setNewsFullData}/>)}
       </ol>
     </section>
   )

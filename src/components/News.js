@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import api from '../utils/Api';
 import './News.css';
+import { Link } from 'react-router-dom';
+import { getDateNews } from '../utils/utils'
 
-function News ( {id} ) {
+
+function News ( {id, newsFullData, setNewsFullData} ) {
 
   const [ newsCard, setNewsCard] = useState({});
 
@@ -10,32 +13,25 @@ function News ( {id} ) {
   api.getOneNews(id)
     .then((res) => {
       setNewsCard(res);
-      console.log(res)
+      const fullData = newsFullData;
+      fullData[id] = res;
+      setNewsFullData(fullData)
     })
     .catch((err) => console.log(err))
   }, [])
 
-  function getDateNews() {
-    if (newsCard.time) {
-      const date = new Date(newsCard.time * 1000);
-      const year = date.getFullYear();
-      const month = date.getMonth();
-      const day = date.getDate();
-      const hours = date.getHours();
-      const minutes = date.getMinutes();
-      const formatedDate = `${year}.${month}.${day} ${hours}:${minutes}`;
-      return formatedDate
-    }
-  }
+  
 
    return (
     <li className="marcer">
       <article className="news">
-        <h1 className="news__title"> {newsCard.title && newsCard.title} </h1>
-        <div className="news__info">
-          <p> Рейтинг: {newsCard.score && newsCard.score}</p>
-          <p> Автор: {newsCard.by && newsCard.by}</p>
-          <time>{getDateNews()}</time>
+        <Link to={`/news/${id}`}>
+          <h1 className="news__title"> {newsCard.title && newsCard.title} </h1>
+        </Link>
+          <div className="news__info">
+          <p className="news__rating"> Рейтинг: {newsCard.score && newsCard.score}</p>
+          <p className="news__author"> Автор: {newsCard.by && newsCard.by}</p>
+          <time className="news__date">{getDateNews(newsCard.time)}</time>
         </div>
       </article>
     </li>

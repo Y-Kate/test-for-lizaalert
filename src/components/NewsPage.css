@@ -1,0 +1,11 @@
+*{
+  border: solid 1px red;
+ }
+
+ .page-news {
+   display: flex;
+   flex-direction: column;
+   max-width: 1280px;
+   min-width: 918px;
+   background-color: #ccd888;
+ }

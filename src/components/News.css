@@ -1,4 +1,6 @@
 .marcer {
+  min-width: 320px;
+  min-height: 25px;
   background-color: #FFA812;
 }
 
@@ -7,32 +9,35 @@
 }
 
 .news {
-  min-width: 320px;
-  min-height: 50px;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
 }
 
 @media (min-width: 620px) {
-  .news {
+  .marcer {
     min-width: 620px;
   }
 }
 
 @media (min-width: 918px) {
-  .news {
+  .marcer {
     min-width: 918px;
     max-width: 1280px;
   }
 }
 
 .news__title {
+  
   font-size: 12px;
   line-height: 14px;
   color: black;
   text-align: center;
   margin: 0;
+  
+  /* text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; */ /* почему не работает многоточие?*/
 }
 
 @media (min-width: 620px) {
@@ -52,7 +57,7 @@
 .news__info {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
   font-size: 10px;
   line-height: 12px;
@@ -70,4 +75,18 @@
     font-size: 16px;
     line-height: 18px;
   }
+}
+
+.news__rating {
+  margin: 0;
+  padding-left: 3px;
+}
+
+.news__author {
+  margin: 0;
+}
+
+.news__date {
+  margin: 0;
+  padding-right: 3px;
 }

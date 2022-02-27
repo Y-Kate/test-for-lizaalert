@@ -26,6 +26,14 @@ class Api {
     })
     .then(this._handleResponse)
   }
+
+  getCommentNews(id) {
+    return fetch(`${this._baseUrl}/item/${id}.json?print=pretty`, {
+      method: 'GET',  
+      headers: this._headers,
+    })
+    .then(this._handleResponse)
+  }
 }
 
 const api = new Api({
