@@ -30,17 +30,17 @@ function NewsPage ({newsFullData}) {
     <div className="page-news">
         <div className="page-news__novigation">
           <a className="page-news__link" href={currentNews.url}>
-          Посмотреть первоисточник.
+          Перейти к первоисточнику.
           </a>
-          <button className="page-news__back">вернуться к новостям</button>
+          <button className="page-news__button-back">вернуться к новостям</button>
         </div>  
       <h1 className="page-news__title">
         {currentNews.title}
       </h1>
-      <p className="page-news__date">
-      {getDateNews(currentNews.time)}
-      </p>
-      <p className="page-news__author">Автор: {currentNews.by}</p>
+      <div className="page-news__data">
+        <p className="page-news__date">{getDateNews(currentNews.time)}</p>
+        <p className="page-news__author">Автор: {currentNews.by}</p>
+      </div>
       <div className="page-news__rank">Комментариев: {currentNews.descendants}</div>
       <section className="page-news__comments">
         Комменты
