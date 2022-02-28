@@ -51,3 +51,8 @@
    font-size: 18px;
    line-height: 20px;
  }
+
+ .comments__list {
+  list-style-type: none;
+ }
+ 

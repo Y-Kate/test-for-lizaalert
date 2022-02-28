@@ -9,22 +9,42 @@ import api from '../utils/Api';
 function NewsPage ({newsFullData}) {
   const { newsId } = useParams();
   const [currentNews, setCurrentNews] = useState({})
+  const [comments, setComments] = useState([])
 
   useEffect(() => {
-    setCurrentNews(newsFullData[newsId])
+    if (newsFullData[newsId]) setCurrentNews(newsFullData[newsId])
+    else {
+      api.getOneNews(newsId)
+        .then((res) => {
+          setCurrentNews(res);
+        })
+        .catch((err) => console.log(err))
+    }
   }, [])
 
-
-    api.getCommentNews(newsId)
+useEffect(() => {
+  if (Object.keys(currentNews).length > 0 && comments.length === 0) {
+    const commentsArr = [];
+    currentNews.kids.forEach((id) => {
+      api.getCommentNews(id)
       .then((res) => {
-        console.log(res.text);
+        commentsArr.push(res)
         // setNewsCard(res);
         // const fullData = newsFullData;
         // fullData[id] = res;
         // setNewsFullData(fullData)
       })
-      .catch((err) => console.log(err))
+      .catch((err) => console.log(err))  
+    })
+    setComments(commentsArr);
+    console.log('2222',commentsArr);
+  }
+}, [currentNews])
 
+useEffect(() => {
+  console.log("1111", comments);
+
+}, [comments])
   
   return (
     <div className="page-news">
@@ -44,6 +64,10 @@ function NewsPage ({newsFullData}) {
       <div className="page-news__rank">Комментариев: {currentNews.descendants}</div>
       <section className="page-news__comments">
         Комменты
+        <ul>
+          <li className="comments__list">{comments.length}</li>
+          {comments.map((comment, i) => <li className="comments__list">{comment.text}</li>)}
+        </ul>
       </section>
     </div>
   );
