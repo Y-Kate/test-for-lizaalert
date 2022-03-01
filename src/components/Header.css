@@ -2,12 +2,13 @@
   background-color: #ffe5b4;
   min-width: 320px;
   min-height: 30px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
-
+/* 
 @media (min-width: 620px) {
   .header {
     min-width: 620px;
@@ -20,7 +21,7 @@
     min-width: 918px;
     max-width: 1280px;
   }
-}
+} */
 
 .header__title {
   font-size: 24px;

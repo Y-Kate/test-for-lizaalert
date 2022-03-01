@@ -1,37 +1,42 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import api from '../utils/Api';
 import { getDateNews } from '../utils/utils';
+import './Comment.css';
 
 
 function Comment({ commentId }) {
     const [commentData, setCommentData] = useState({})
+    const commentRef = useRef();
 
     useEffect(() => {
-        console.log("Компонент дид маунт");
+
 
         api.getCommentNews(commentId)
             .then((res) => {
                 console.log(res)
                 setCommentData(res);
+                commentRef.current.innerHTML = res.text;
             })
             .catch((err) => console.log(err))  
     }, [])
 
     return (
-        <li className="coment__text">
-            <div>
-                <p>
-                {commentData.parent} {commentData.kids}
+        <li className="coment">
+            <div className="coment__data">
+                <p className="coment__info">
+                {/* {commentData.parent} {commentData.kids} */}
+                {commentData.by}
                 </p>
-                <p>{getDateNews(commentData.time)}</p>
+                <p className="coment__info">{getDateNews(commentData.time)}</p>
             </div>
-            {commentData.text}
+            <div className="coment__text" ref={commentRef}>
+            </div>
             {commentData.kids && commentData.kids.length > 0 &&
                 <ul>
                     {commentData.kids.map((k) => <Comment commentId={k} />)}
                 </ul>
             }
-          </li>
+        </li>
     )
 }
 

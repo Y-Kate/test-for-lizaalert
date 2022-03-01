@@ -12,11 +12,9 @@ function Footer() {
   }, []);
 
   return (
-    <Route exact path='/'>
-      <footer className="footer">
-        <p className="footer__copyright">&copy; {year} Kate_Y</p>
-      </footer>
-    </Route>
+    <footer className="footer">
+      <p className="footer__copyright">&copy; {year} Kate_Y</p>
+    </footer>
   );
 }
 

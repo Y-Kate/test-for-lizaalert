@@ -3,12 +3,9 @@ import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import { getDateNews } from '../utils/utils';
 import Comment from './Comment';
-
 import api from '../utils/Api';
 
-// import './Header.css';
-
-function NewsPage ({newsFullData}) {
+function NewsPage ({}) {
   const { newsId } = useParams();
   const [currentNews, setCurrentNews] = useState({})
 
@@ -24,22 +21,22 @@ function NewsPage ({newsFullData}) {
     <div className="page-news">
         <div className="page-news__novigation">
           <a className="page-news__link" href={currentNews.url}>
-          Перейти к первоисточнику.
+          Перейти к первоисточнику
           </a>
-          <button className="page-news__button-back">вернуться к новостям</button>
+          <button className="page-news__button-back" type="button" aria-label="Назад" >Вернуться</button>
         </div>  
       <h1 className="page-news__title">
         {currentNews.title}
       </h1>
       <div className="page-news__data">
-        <p className="page-news__date">{getDateNews(currentNews.time)}</p>
-        <p className="page-news__author">Автор: {currentNews.by}</p>
+        <p className="page-news__date-info">{getDateNews(currentNews.time)}</p>
+        <p className="page-news__date-info">Автор: {currentNews.by}</p>
       </div>
       <div className="page-news__rank">Комментариев: {currentNews.descendants}</div>
       <section className="page-news__comments">
         Комменты
-        <ul>
-          {Object.keys(currentNews).length > 0 && currentNews.kids.length > 0 && currentNews.kids.map((commentId) => <Comment key={commentId} commentId={commentId} />)}
+        <ul className="comment-list">
+          {Object.keys(currentNews).length > 0 && currentNews.kids.length > 0 && currentNews.kids.slice(0, 5).map((commentId) => <Comment key={commentId} commentId={commentId} />)}
         </ul>
       </section>
 

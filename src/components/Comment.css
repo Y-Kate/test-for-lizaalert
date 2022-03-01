@@ -1,0 +1,37 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.coment__data {
+  display: flex;
+  margin: 0
+}
+
+.coment__info {
+  margin: 0 5px 0 5px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+
+
+
+.coment__text {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+@media (min-width: 620px) {
+  .coment__info, .coment__text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+ }
+ 
+ @media (min-width: 918px) {
+  .coment__info, .coment__text {
+    font-size: 18px;
+    line-height: 20px;
+   }
+ }
