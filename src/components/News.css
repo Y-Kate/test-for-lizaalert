@@ -1,6 +1,10 @@
 .marcer {
-  min-width: 320px;
-  min-height: 25px;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  padding-left: 5px;
+  font-family: inherit;
+  color: #1e1e1e;
   background-color: #FFA812;
 }
 
@@ -11,43 +15,30 @@
 .news {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-}
-
-@media (min-width: 620px) {
-  .marcer {
-    min-width: 620px;
-  }
-}
-
-@media (min-width: 918px) {
-  .marcer {
-    min-width: 918px;
-    max-width: 1280px;
-  }
 }
 
 .news__title {
-  
   font-size: 12px;
   line-height: 14px;
+  max-height: 16px;
   color: black;
   text-align: center;
   margin: 0;
-  
-  /* text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap; */ /* почему не работает многоточие?*/
+  padding-left: 5px;
+  /* overflow: hidden;
+  white-space: nowrap;   почему не работает многоточие?
+  text-overflow: ellipsis;
+  text-decoration: none; почему не работает */
 }
 
-@media (min-width: 620px) {
+@media (min-width: 768px) {
   .news__title {
     font-size: 14px;
     line-height: 16px;
   }
 }
 
-@media (min-width: 918px) {
+@media (min-width: 1280px) {
   .news__title {
     font-size: 18px;
     line-height: 20px;
@@ -63,14 +54,14 @@
   line-height: 12px;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 768px) {
   .news__info {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
-@media (min-width: 918px) {
+@media (min-width: 1260px) {
   .news__info {
     font-size: 16px;
     line-height: 18px;
@@ -79,7 +70,7 @@
 
 .news__rating {
   margin: 0;
-  padding-left: 3px;
+  padding-left: 5px;
 }
 
 .news__author {
@@ -88,5 +79,5 @@
 
 .news__date {
   margin: 0;
-  padding-right: 3px;
+  padding-right: 5px;
 }

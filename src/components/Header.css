@@ -8,20 +8,7 @@
   align-items: center;
   margin: 0;
 }
-/* 
-@media (min-width: 620px) {
-  .header {
-    min-width: 620px;
-    min-height: 50px;
-  }
-}
 
-@media (min-width: 918px) {
-  .header {
-    min-width: 918px;
-    max-width: 1280px;
-  }
-} */
 
 .header__title {
   font-size: 24px;
@@ -29,7 +16,7 @@
   margin: 0;
 }
 
-@media (min-width: 620px) {
+@media (min-width: 768px) {
   .header__title {
     font-size: 36px;
     line-height: 38px;

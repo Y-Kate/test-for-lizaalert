@@ -18,12 +18,12 @@ function App() {
 
       <Route exact path="/">
         <Header/>
-          <Main newsFullData={newsFullData} setNewsFullData={setNewsFullData}/>
+        <Main newsFullData={newsFullData} setNewsFullData={setNewsFullData}/>
         <Footer/>
       </Route>
       <Route path="/news/:newsId">
         <Header/>
-          <NewsPage newsFullData={newsFullData}/>
+        <NewsPage newsFullData={newsFullData}/>
         <Footer/>
       </Route>
     </div>

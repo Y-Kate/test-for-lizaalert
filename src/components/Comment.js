@@ -21,18 +21,18 @@ function Comment({ commentId }) {
     }, [])
 
     return (
-        <li className="coment">
-            <div className="coment__data">
-                <p className="coment__info">
+        <li className="comment">
+            <div className="comment__data">
+                <p className="comment__info">
                 {/* {commentData.parent} {commentData.kids} */}
                 {commentData.by}
                 </p>
-                <p className="coment__info">{getDateNews(commentData.time)}</p>
+                <p className="comment__info">{getDateNews(commentData.time)}</p>
             </div>
-            <div className="coment__text" ref={commentRef}>
+            <div className="comment__text" ref={commentRef}>
             </div>
             {commentData.kids && commentData.kids.length > 0 &&
-                <ul>
+                <ul className="comment-list-inside">
                     {commentData.kids.map((k) => <Comment commentId={k} />)}
                 </ul>
             }

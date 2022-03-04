@@ -3,35 +3,49 @@
   flex-direction: column;
 }
 
-.coment__data {
+.comment__data {
   display: flex;
-  margin: 0
+  margin: 0;
 }
 
-.coment__info {
-  margin: 0 5px 0 5px;
+.comment__info {
+  margin: 0 5px 0 0;
   font-size: 10px;
   line-height: 12px;
 }
 
-
-
-
-.coment__text {
+.comment__text {
   font-size: 10px;
   line-height: 12px;
 }
 
-@media (min-width: 620px) {
-  .coment__info, .coment__text {
+.comment__text * {
+  margin: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+.comment__text a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+.comment-list-inside {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .comment__info, .comment__text {
     font-size: 14px;
     line-height: 16px;
   }
- }
+}
  
- @media (min-width: 918px) {
-  .coment__info, .coment__text {
+@media (min-width: 1260px) {
+  .comment__info, .comment__text {
     font-size: 18px;
     line-height: 20px;
-   }
- }
+  }
+}

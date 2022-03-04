@@ -1,19 +1,6 @@
 .footer {
   background-color: #ffe5b4;
-  min-width: 320px;
+  width: 100%;
   display: flex;
   justify-content: center;
-}
-
-@media (min-width: 620px) {
-  .footer {
-    min-width: 620px;
-  }
-}
-
-@media (min-width: 918px) {
-  .footer {
-    min-width: 918px;
-    max-width: 1280px;
-  }
 }
