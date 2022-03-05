@@ -1,6 +1,6 @@
 .comment {
-  display: flex;
-  flex-direction: column;
+  display: list-item;
+  /* display: inline; */
 }
 
 .comment__data {
@@ -20,6 +20,7 @@
 }
 
 .comment__text * {
+  display: inline-block;
   margin: 0;
   padding: 0;
   white-space: normal;
@@ -27,13 +28,15 @@
 
 .comment__text a {
   text-decoration: none;
-  color: blueviolet;
+  color: #3B6C76;
 }
 
 .comment-list-inside {
   padding-left: 10px;
   display: flex;
   flex-direction: column;
+  list-style-type: disc;
+
 }
 
 @media (min-width: 768px) {

@@ -28,14 +28,14 @@ function NewsPage ({}) {
           <a className="page-news__link" href={currentNews.url}>
           Перейти к первоисточнику
           </a>
-          <button className="page-news__button-back" type="button" aria-label="Назад" onClick={handleClickReturn} >Вернуться</button>
+          <button className="page-news__button-back" type="button" aria-label="Назад" onClick={handleClickReturn}>Вернуться</button>
         </div>  
       <h1 className="page-news__title">
         {currentNews.title}
       </h1>
       <div className="page-news__data">
-        <p className="page-news__date-info">{getDateNews(currentNews.time)}</p>
-        <p className="page-news__date-info">Автор: {currentNews.by}</p>
+        <p className="page-news__information-comments">{getDateNews(currentNews.time)}</p>
+        <p className="page-news__information-comments">Автор: {currentNews.by}</p>
       </div>
       <div className="page-news__rank">Комментариев: {currentNews.descendants}</div>
       <section className="page-news__comments">
@@ -43,7 +43,6 @@ function NewsPage ({}) {
           {Object.keys(currentNews).length > 0 && currentNews.kids.length > 0 && currentNews.kids.slice(0, 5).map((commentId) => <Comment key={commentId} commentId={commentId} />)}
         </ul>
       </section>
-
     </div>
   );
 }

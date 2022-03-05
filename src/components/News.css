@@ -1,48 +1,33 @@
-.marcer {
+.news {
   font-size: 14px;
   line-height: 25px;
   font-weight: 400;
-  padding-left: 5px;
+  padding: 5px;
   font-family: inherit;
   color: #1e1e1e;
-  background-color: #FFA812;
+  background-color: #e9e9e9;
 }
 
-.marcer:nth-child(2n) {
-  background-color: #FDE910;
-}
-
-.news {
-  display: flex;
-  flex-direction: column;
+.news:nth-child(2n) {
+  background-color: #d3d3d3;
 }
 
 .news__title {
   font-size: 12px;
   line-height: 14px;
-  max-height: 16px;
-  color: black;
-  text-align: center;
-  margin: 0;
-  padding-left: 5px;
-  /* overflow: hidden;
-  white-space: nowrap;   почему не работает многоточие?
-  text-overflow: ellipsis;
-  text-decoration: none; почему не работает */
+  color: #1e1e1e;
+  text-align: left;
+  margin: 0 0 5px;
 }
 
-@media (min-width: 768px) {
-  .news__title {
-    font-size: 14px;
-    line-height: 16px;
-  }
+.news__title a {
+  text-decoration: none;
+  color: #1e1e1e;
 }
 
-@media (min-width: 1280px) {
-  .news__title {
-    font-size: 18px;
-    line-height: 20px;
-  }
+.news__title a:hover {
+  opacity: 0.8;
+  transition: opacity .4s ease-out;
 }
 
 .news__info {
@@ -52,20 +37,6 @@
   margin: 0;
   font-size: 10px;
   line-height: 12px;
-}
-
-@media (min-width: 768px) {
-  .news__info {
-    font-size: 14px;
-    line-height: 16px;
-  }
-}
-
-@media (min-width: 1260px) {
-  .news__info {
-    font-size: 16px;
-    line-height: 18px;
-  }
 }
 
 .news__rating {
@@ -80,4 +51,28 @@
 .news__date {
   margin: 0;
   padding-right: 5px;
+}
+
+@media (min-width: 768px) {
+  .news__title {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .news__info {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .news__title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .news__info {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import { Route } from 'react-router-dom';
 
 function Footer() {
   const [year, setYear] = React.useState(2021);

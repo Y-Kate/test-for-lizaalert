@@ -3,41 +3,37 @@ import api from '../utils/Api';
 import { getDateNews } from '../utils/utils';
 import './Comment.css';
 
-
 function Comment({ commentId }) {
-    const [commentData, setCommentData] = useState({})
-    const commentRef = useRef();
+  const [commentData, setCommentData] = useState({})
+  const commentRef = useRef();
 
-    useEffect(() => {
+  useEffect(() => {
 
+  api.getCommentNews(commentId)
+    .then((res) => {
+      setCommentData(res);
+      commentRef.current.innerHTML = res.text;
+    })
+    .catch((err) => console.log(err))  
+  }, [])
 
-        api.getCommentNews(commentId)
-            .then((res) => {
-                console.log(res)
-                setCommentData(res);
-                commentRef.current.innerHTML = res.text;
-            })
-            .catch((err) => console.log(err))  
-    }, [])
-
-    return (
-        <li className="comment">
-            <div className="comment__data">
-                <p className="comment__info">
-                {/* {commentData.parent} {commentData.kids} */}
-                {commentData.by}
-                </p>
-                <p className="comment__info">{getDateNews(commentData.time)}</p>
-            </div>
-            <div className="comment__text" ref={commentRef}>
-            </div>
-            {commentData.kids && commentData.kids.length > 0 &&
-                <ul className="comment-list-inside">
-                    {commentData.kids.map((k) => <Comment commentId={k} />)}
-                </ul>
-            }
-        </li>
-    )
+  return (
+    <li className="comment">
+      <div className="comment__data">
+        <p className="comment__info">
+          {commentData.by}
+        </p>
+        <p className="comment__info">{getDateNews(commentData.time)}</p>
+      </div>
+      <div className="comment__text" ref={commentRef}>
+      </div>
+      {commentData.kids && commentData.kids.length > 0 &&
+        <ul className="comment-list-inside">
+          {commentData.kids.map((k) => <Comment commentId={k}/>)}
+        </ul>
+      }
+    </li>
+  )
 }
 
 export default Comment;

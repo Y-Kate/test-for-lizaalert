@@ -5,7 +5,7 @@ function Header () {
 
   return (
     <header className="header">
-      <h1 className="header__title">Hacker News Топ - 100</h1>
+      <h1 className="header__title">Hacker News: 100 свежих новостей</h1>
     </header>
   );
 }

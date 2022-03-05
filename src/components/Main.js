@@ -10,17 +10,15 @@ function Main ({newsFullData, setNewsFullData}) {
   useEffect(() => {
     api.getNewsIds()
     .then((res) => {
-      setNewsIdArray(res.splice(0,4))
+      setNewsIdArray(res.splice(0,100))
     })
     .catch((err) => console.log(err))
   }, [])
 
-  console.log(newsFullData)
-
   return (
     <section className="main">
       <ol className="main__news-list">
-        {newsIdArray.map((id) => <News id={id} newsFullData={newsFullData} setNewsFullData={setNewsFullData}/>)}
+        {newsIdArray.map((id, i) => <News id={id} newsFullData={newsFullData} setNewsFullData={setNewsFullData} index={i} />)}
       </ol>
     </section>
   )

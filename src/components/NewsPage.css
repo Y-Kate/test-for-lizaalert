@@ -24,7 +24,7 @@
   font-size: 8px;
   line-height: 10px;
   padding: 3px 5px;
-  border: 1px solid black;
+  border: 1px solid #000;
   background-color: #FFA812;
 }
 
@@ -35,18 +35,17 @@
 }
 
 .page-news__link {
-  color:black;
+  color:#000;
   margin-left: 5px;
   font-size: 8px;
   line-height: 10px;
 }
 
 .page-news__title {
-font-size: 18px;
-line-height: 20px;
-text-align: center;
-margin: 0;
-margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  margin: 0 0 8px 0;
 }
 
 .page-news__data {
@@ -55,26 +54,32 @@ margin-bottom: 8px;
   margin-bottom: 5px;
 }
 
-.page-news__date-info {
+.page-news__information-comments {
   font-size: 10px;
   line-height: 12px;
   margin: 0;
 }
 
-.comment-list {
-  width: 100%;
-  padding-left: 7px;
-  margin: 0;
-} 
- 
 .page-news__rank {
   font-size: 12px;
   line-height: 14px;
   margin-bottom: 5px;
 }
 
+.page-news__comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-list {
+  width: 100%;
+  padding-left: 12px;
+  margin: 0;
+  list-style-type: disc;
+} 
+
 @media (min-width: 768px) {
-  .page-news__button-back{
+  .page-news__button-back {
     font-size: 12px;
     line-height: 16px;
   }
@@ -85,7 +90,7 @@ margin-bottom: 8px;
     line-height: 18px;
   }
 
-  .page-news__title{
+  .page-news__title {
     font-size: 28px;
     line-height: 30px;
   }
@@ -105,9 +110,8 @@ margin-bottom: 8px;
   }
 }
 
-
 @media (min-width: 1280px) {
-  .page-news__button-back{
+  .page-news__button-back {
     font-size: 14px;
     line-height: 18px;
   }
@@ -117,7 +121,7 @@ margin-bottom: 8px;
     line-height: 20px;
   }
 
-  .page-news__title{
+  .page-news__title {
     font-size: 38px;
     line-height: 40px;
   }
@@ -131,4 +135,4 @@ margin-bottom: 8px;
     font-size: 20px;
     line-height: 22px;
   }
- }
+}
