@@ -28,7 +28,7 @@ function Comment({ commentId }) {
       </div>
       {commentData.kids && commentData.kids.length > 0 &&
         <ul className="comment-list-inside">
-          {commentData.kids.map((k) => <Comment commentId={k}/>)}
+          {commentData.kids.map((k, i) => <Comment commentId={k} key={i}/>)}
         </ul>
       }
     </li>

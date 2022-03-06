@@ -18,8 +18,7 @@ class Api {
     })
     .then(this._handleResponse)
   }
- //topstories.json?print=pretty`
-  // newstories
+
   getOneNews(id) {
     return fetch(`${this._baseUrl}/item/${id}.json`, {
       method: 'GET',  
