@@ -1,5 +1,6 @@
 .comment {
-  display: list-item;
+  display: flex;
+  flex-direction: column;
   /* display: inline; */
 }
 
@@ -33,9 +34,10 @@
 
 .comment-list-inside {
   padding-left: 10px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  list-style-type: disc;
+  list-style-type: none;
 
 }
 

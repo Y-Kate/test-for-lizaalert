@@ -40,7 +40,7 @@ function NewsPage ({}) {
       <div className="page-news__rank">Комментариев: {currentNews.descendants}</div>
       <section className="page-news__comments">
         <ul className="comment-list">
-          {Object.keys(currentNews).length > 0 && currentNews.kids.length > 0 && currentNews.kids.slice(0, 5).map((commentId) => <Comment key={commentId} commentId={commentId} />)}
+          {Object.keys(currentNews).length > 0 && currentNews.kids.length > 0 && currentNews.kids.map((commentId) => <Comment key={commentId} commentId={commentId} />)}
         </ul>
       </section>
     </div>
