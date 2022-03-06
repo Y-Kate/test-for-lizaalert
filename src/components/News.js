@@ -4,7 +4,7 @@ import './News.css';
 import { Link } from 'react-router-dom';
 import { getDateNews } from '../utils/utils'
 
-function News ( {id, newsFullData, setNewsFullData, index} ) {
+function News ( {id, index} ) {
 
   const [ newsCard, setNewsCard] = useState({});
 
@@ -12,9 +12,6 @@ function News ( {id, newsFullData, setNewsFullData, index} ) {
     api.getOneNews(id)
       .then((res) => {
         setNewsCard(res);
-        const fullData = newsFullData;
-        fullData[id] = res;
-        setNewsFullData(fullData)
       })
       .catch((err) => console.log(err))
   }, [])

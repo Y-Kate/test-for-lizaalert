@@ -5,21 +5,18 @@ import Main from './Main';
 import Footer from './Footer';
 import NewsPage from './NewsPage';
 import { Route } from 'react-router-dom';
-import { useState } from 'react';
 
-function App() {
-  const [newsFullData, setNewsFullData] = useState({});
-  
+function App() {  
   return (
     <div className="page">
       <Route exact path="/">
         <Header/>
-        <Main newsFullData={newsFullData} setNewsFullData={setNewsFullData}/>
+        <Main/>
         <Footer/>
       </Route>
       <Route path="/news/:newsId">
         <Header/>
-        <NewsPage newsFullData={newsFullData}/>
+        <NewsPage/>
         <Footer/>
       </Route>
     </div>

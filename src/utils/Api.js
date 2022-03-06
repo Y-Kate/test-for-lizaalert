@@ -12,13 +12,13 @@ class Api {
   }
 
   getNewsIds() {
-    return fetch(`${this._baseUrl}/topstories.json?print=pretty`, {
+    return fetch(`${this._baseUrl}/newstories.json?print=pretty`, {
       method: 'GET',  
       headers: this._headers,
     })
     .then(this._handleResponse)
   }
-
+ //topstories.json?print=pretty`
   // newstories
   getOneNews(id) {
     return fetch(`${this._baseUrl}/item/${id}.json`, {

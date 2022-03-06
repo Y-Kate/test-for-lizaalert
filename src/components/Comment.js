@@ -8,14 +8,13 @@ function Comment({ commentId }) {
   const commentRef = useRef();
 
   useEffect(() => {
-
-  api.getCommentNews(commentId)
-    .then((res) => {
-      setCommentData(res);
-      commentRef.current.innerHTML = res.text;
-    })
-    .catch((err) => console.log(err))  
-  }, [])
+    api.getCommentNews(commentId)
+      .then((res) => {
+        setCommentData(res);
+        commentRef.current.innerHTML = res.text || "Удален";
+      })
+      .catch((err) => console.log(err))  
+  }, [commentId])
 
   return (
     <li className="comment">

@@ -1,12 +1,19 @@
 .header {
-  background-color: #ffe5b4;
+  background-color: #efa53a;
   min-width: 320px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 0;
-  padding: 15px 0;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+
+.header__logo {
+  width: 70px;
+  height: 80px;
+  margin-right: 10px;
 }
 
 .header__title {
@@ -17,6 +24,15 @@
 }
 
 @media (min-width: 768px) {
+  .header {
+    padding: 15px;
+  }
+
+  .header__logo {
+    width: 100px;
+    height: 110px;
+  }
+
   .header__title {
     font-size: 36px;
     line-height: 38px;

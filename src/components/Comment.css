@@ -1,6 +1,6 @@
 .comment {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   /* display: inline; */
 }
 
@@ -13,6 +13,7 @@
   margin: 0 5px 0 0;
   font-size: 10px;
   line-height: 12px;
+  font-weight: 700;
 }
 
 .comment__text {
@@ -37,7 +38,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  list-style-type: none;
+  list-style-type: disc;
 
 }
 

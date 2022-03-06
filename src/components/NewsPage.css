@@ -1,12 +1,11 @@
-/* *{
-  border: solid 1px red;
- } */
-
 .page-news {
   display: flex;
   flex-direction: column;
   background-color: #F3EDE6;
-  padding: 5px 10px;
+  padding: 10px 10px;
+  min-height: calc(100vh - 174px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .page-news__novigation {
@@ -18,22 +17,32 @@
 }
 
 .page-news__button-back {
-  border-radius: 5px;
+  border-radius: 11px;
   box-sizing: border-box;
   font-size: 8px;
   line-height: 10px;
-  padding: 3px 5px;
-  border: 1px solid #000;
-  background-color: #FFA812;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: #efa63a;
+  border: 2px solid #efa63a;
 }
 
 .page-news__button-back:hover {
   cursor: pointer;
-  opacity: 0.8;
-  transition: opacity 0.2s linear;
+  background: linear-gradient(180deg, #efa63a 0%, #f26737 100% );
+  color: #fff;
+  transition: all 0.2s linear;
 }
 
 .page-news__link {
+  color:#000;
+  margin-left: 5px;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.page-news__text {
   color:#000;
   margin-left: 5px;
   font-size: 8px;
@@ -47,22 +56,24 @@
   margin: 0 0 8px 0;
 }
 
-.page-news__data {
+.page-news__info {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.page-news__information-comments {
+.page-news__info-text {
   font-size: 10px;
   line-height: 12px;
   margin: 0;
+  font-weight: 700;
 }
 
 .page-news__rank {
   font-size: 12px;
   line-height: 14px;
   margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .page-news__comments {
@@ -75,17 +86,26 @@
   padding-left: 12px;
   box-sizing: border-box;
   margin: 0;
-  list-style-type: none;
+  list-style-type: disc;
 } 
 
 @media (min-width: 768px) {
+  .page-news {
+    min-height: calc(100vh - 204px);
+  }
+
   .page-news__button-back {
     font-size: 12px;
     line-height: 16px;
+    border-radius: 14px;
   }
 
   .page-news__link {
-    height: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .page-news__text {
     font-size: 14px;
     line-height: 18px;
   }
@@ -114,9 +134,15 @@
   .page-news__button-back {
     font-size: 14px;
     line-height: 18px;
+    border-radius: 15px;
   }
 
   .age-news__link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .page-news__text {
     font-size: 16px;
     line-height: 20px;
   }

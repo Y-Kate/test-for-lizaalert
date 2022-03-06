@@ -3,8 +3,7 @@ import './Main.css';
 import News from './News';
 import api from '../utils/Api';
 
-function Main ({newsFullData, setNewsFullData}) {
-
+function Main () {
   const [newsIdArray, setNewsIdArray] = useState([]);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ function Main ({newsFullData, setNewsFullData}) {
   return (
     <section className="main">
       <ol className="main__news-list">
-        {newsIdArray.map((id, i) => <News id={id} newsFullData={newsFullData} setNewsFullData={setNewsFullData} index={i} />)}
+        {newsIdArray.map((id, i) => <News id={id} index={i} key={i}/>)}
       </ol>
     </section>
   )
