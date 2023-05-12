@@ -18,23 +18,21 @@
 ### Ссылка на GitHub Pages
 ```https://y-kate.github.io/test-for-lizaalert/```
 
-
-
 ### Инструкция
 Для работы с проектом необходимо выполнить следующие действия:
 
 1. Клонировать репозиторий
 
-git clone ```https://github.com/Y-Kate/test-for-lizaalert.git```
+  git clone ```https://github.com/Y-Kate/test-for-lizaalert.git```
 
 2. Установить все зависимости
 
-npm install
+  npm install
 
 3. Запустить проект
 
-npm start
+  npm start
 
 4. Собрать проект
 
-npm run build
+  npm run build
