@@ -2,7 +2,7 @@
 Разработать интерфейс для сайта Hacker News, состоящий из двух страниц.
 
 ## Функционал
-Использован официальный API Hacker News.  ```https://github.com/HackerNews/API```
+Использован официальный API Hacker News.  ```https://github.com/HackerNews/API```  
 На первой странице выводятся 100 свежих новостей в хронологиеском порядке.  
 По клику на новость происходит переход на вторую страницу, содержащую ссылку на первоисточник и комментарии к новости в виде дерева.  
 Обе страницы адаптивны.  
@@ -16,7 +16,7 @@
 - CSS3
 
 ### Ссылка на GitHub Pages
-https://y-kate.github.io/test-for-lizaalert/
+```https://y-kate.github.io/test-for-lizaalert/```
 
 
 
@@ -25,7 +25,7 @@ https://y-kate.github.io/test-for-lizaalert/
 
 1. Клонировать репозиторий
 
-git clone https://github.com/Y-Kate/test-for-lizaalert.git
+git clone ```https://github.com/Y-Kate/test-for-lizaalert.git```
 
 2. Установить все зависимости
 
