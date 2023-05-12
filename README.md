@@ -27,12 +27,12 @@
 
 2. Установить все зависимости
 
-  npm install
+<pre>  ```npm install``` </pre>
 
 3. Запустить проект
 
-  npm start
+<pre>  ```npm start```
 
 4. Собрать проект
 
-  npm run build
+<pre>  ```npm run build```</pre>
