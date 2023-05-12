@@ -22,7 +22,7 @@
 Для работы с проектом необходимо выполнить следующие действия:
 
 1. Клонировать репозиторий
-<pre>  git clone ```https://github.com/Y-Kate/test-for-lizaalert.git```</pre>
+```<pre>  git clone https://github.com/Y-Kate/test-for-lizaalert.git</pre>```
 2. Установить все зависимости
 <pre>  ```npm install``` </pre>
 3. Запустить проект
