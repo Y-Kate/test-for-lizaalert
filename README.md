@@ -23,7 +23,7 @@
 
 1. Клонировать репозиторий
 
-  git clone ```https://github.com/Y-Kate/test-for-lizaalert.git```
+<pre>  git clone ```https://github.com/Y-Kate/test-for-lizaalert.git```</pre>
 
 2. Установить все зависимости
 
