@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test-for-lizaalert/static/css/main.56087f6b.css",
-    "main.js": "/test-for-lizaalert/static/js/main.1523793b.js",
+    "main.js": "/test-for-lizaalert/static/js/main.7caf36bf.js",
     "static/js/787.29f492c3.chunk.js": "/test-for-lizaalert/static/js/787.29f492c3.chunk.js",
     "static/media/Gilroy-Bold.woff": "/test-for-lizaalert/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
     "static/media/Gilroy-Regular.woff": "/test-for-lizaalert/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
@@ -9,11 +9,11 @@
     "static/media/Gilroy-Regular.woff2": "/test-for-lizaalert/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "index.html": "/test-for-lizaalert/index.html",
     "main.56087f6b.css.map": "/test-for-lizaalert/static/css/main.56087f6b.css.map",
-    "main.1523793b.js.map": "/test-for-lizaalert/static/js/main.1523793b.js.map",
+    "main.7caf36bf.js.map": "/test-for-lizaalert/static/js/main.7caf36bf.js.map",
     "787.29f492c3.chunk.js.map": "/test-for-lizaalert/static/js/787.29f492c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56087f6b.css",
-    "static/js/main.1523793b.js"
+    "static/js/main.7caf36bf.js"
   ]
 }
